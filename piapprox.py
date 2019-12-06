@@ -1,8 +1,6 @@
 import random
-import math
 import time
 import sys
-sqrt = math.sqrt
 
 
 def main(number_of_dart_throws):
@@ -25,7 +23,7 @@ def main(number_of_dart_throws):
     for dart in dart_throws:
         # If distance to centre of square is larger than radius (0.5),
         # then the dart is outside the circle.
-        if sqrt((dart[0] - 0.5)**2 + (dart[1] - 0.5)**2) <= 0.5:
+        if (dart[0] - 0.5)**2 + (dart[1] - 0.5)**2 <= 0.25:
             num_of_darts_in_circle += 1
 
     pi = (num_of_darts_in_circle / len(dart_throws)) * 4
